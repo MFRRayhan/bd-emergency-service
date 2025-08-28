@@ -23,7 +23,7 @@ document.querySelectorAll('#card-copy').forEach((btn) => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
 
-        const card = btn.closest('div.bg-white');
+        const card = btn.closest('div.single-card-box');
         const number = card.querySelector('h2').textContent.trim();
 
         navigator.clipboard.writeText(number).then(() => {
@@ -40,7 +40,7 @@ document.querySelectorAll('#card-call').forEach((btn) => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
 
-        const card = btn.closest('div.bg-white');
+        const card = btn.closest('div.single-card-box');
         const text = card.querySelector('h3').textContent.trim();
         const serviceName = text
             .split(' ')
