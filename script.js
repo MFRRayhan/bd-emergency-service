@@ -7,7 +7,7 @@ let copyCount = 0;
 const heartCounter = document.getElementById('header-heart-count');
 const coinCounter = document.getElementById('header-coin-count');
 const copyCounterEl = document.querySelector('.copy-history');
-const historyContainer = document.querySelector('.space-y-3');
+const historyContainer = document.querySelector('.call-history');
 const clearHistoryBtn = document.getElementById('history-clear-btn');
 
 // Heart Button
