@@ -6,6 +6,8 @@
 4. What is **Event Delegation** in JavaScript? Why is it useful?
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
+---
+
 ### 1. Difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll:
 
 -   **getElementById:** একটি এলিমেন্টের ইউনিক আইডি ব্যবহার করে ঐ নির্দিষ্ট এলিমেন্ট খুঁজে বের করে।
@@ -25,10 +27,20 @@
 
 ---
 
-### ৩. **Event Bubbling and how does it work:**
+### 3. **Event Bubbling and how does it work:**
 
 **Event Bubbling** হলো এমন একটি প্রক্রিয়া যেখানে একটি ইভেন্ট যখন একটি এলিমেন্টে ট্রিগার হয়, তখন সেই ইভেন্টটি তার **parent** এলিমেন্টগুলোর মধ্য দিয়ে ক্রমান্বয়ে উপরের দিকে **bubbles up** হতে থাকে।
 
 -   **how does it work:** যখন একটি **child** এলিমেন্টে ক্লিক করা হয়, তখন সেই ক্লিক ইভেন্টটি প্রথমে চাইল্ড এলিমেন্টের ইভেন্ট হ্যান্ডেলারকে ট্রিগার করে। এরপর এটি তার **immediate parent** এর ইভেন্ট হ্যান্ডলারকে ট্রিগার করে, তারপর **Grandparent**-এর, এবং এভাবে **DOM** ট্রি-এর একেবারে উপরে (`<body>` এবং `<html>`) পর্যন্ত চলতে থাকে। যদি কোনো প্যারেন্ট এলিমেন্টে **addEventListener** থাকে, তাহলে চাইল্ড এলিমেন্টে ক্লিক করলে সেই প্যারেন্টের **handler**-টিও **Active** হবে।
+
+---
+
+### 4. **Event Delegation**
+
+**Event Delegation** হলো একটি **technique** যেখানে একটি **parent element** তার **child elements** -এর ইভেন্ট handle করে। অর্থাৎ, আমরা প্রতিটি **child element** -এ আলাদা **listener** বসানোর বদলে, **parent element** -এ একটি **listener** বসাই এবং সেই **listener**, **child element** -এ ঘটানো ইভেন্টকে **detect** করে **handle** করে।
+
+-   **Why is it useful:**
+    -   এটি মেমরি ব্যবহার কমায়, কারণ অনেকগুলো **EventListener** তৈরি করার পরিবর্তে কেবল একটি **listener** তৈরি করতে হয়।
+    -   এটি ডায়নামিকভাবে তৈরি করা নতুন এলিমেন্টগুলোর জন্যও কাজ করে, কারণ নতুন এলিমেন্ট যোগ হলেও প্যারেন্টে যুক্ত ইভেন্ট লিসেনারটি সেগুলোকে ধরতে পারে।
 
 ---
