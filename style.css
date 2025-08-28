@@ -1,0 +1,23 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global CSS */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 700 !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
