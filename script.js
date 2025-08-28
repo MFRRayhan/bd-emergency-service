@@ -62,13 +62,13 @@ document.querySelectorAll('#card-call').forEach((btn) => {
         const time = now.toLocaleTimeString();
 
         const historyItem = document.createElement('div');
-        historyItem.className = 'flex justify-between items-center bg-[#fafafa] p-4 rounded-lg';
+        historyItem.className = 'flex justify-between items-center bg-[#fafafa] p-4 gap-4 rounded-lg';
         historyItem.innerHTML = `
         <div>
             <h4 class="text-[#111] font-['inter'] text-lg font-semibold capitalize">${serviceName}</h4>
             <p class="text-[#5c5c5c] font-['hind_madurai'] font-normal text-lg">${number}</p>
         </div>
-        <span class="text-[#111] font-['hind_madurai'] font-normal text-lg">${time}</span>
+        <span class="text-[#111] font-['hind_madurai'] font-normal text-lg whitespace-nowrap">${time}</span>
         `;
         historyContainer.appendChild(historyItem);
     });
